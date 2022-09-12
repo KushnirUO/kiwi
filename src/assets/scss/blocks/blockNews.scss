@@ -1,0 +1,252 @@
+.blockNews_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.125rem;
+  margin: 6.250rem 0;
+  max-height: 37.5rem;
+}
+
+.newsTitle {
+  text-align: center;
+}
+
+.newsInfoDate_subtitle {
+  display: flex;
+  flex-direction: column;
+  height: 3rem;
+}
+
+.threeGridNews {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+}
+
+.threeGridNews_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 24.1875rem;
+  max-height: 33.1875rem;
+  gap: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.newsPic {
+  width: 100%;
+}
+
+.newsPic > img {
+  width: 100%;
+  object-fit: contain;
+
+}
+
+.newsInfoDate {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  margin: 2.5rem;
+}
+
+.newsInfoDate_button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonSmall {
+  width: 8rem;
+  height: 2.5rem;
+}
+
+.buttonPlus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.375rem;
+  height: 1.375rem;
+  font-size: 1.875rem;
+  color: white;
+  background: linear-gradient(297.26deg, #74E6CF 34.09%, #C0E594 96.73%);
+  border-radius: 3.125rem;
+}
+
+.newsInfoDate_text p {
+  width: 100%;
+  max-width: 32.5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #696969;
+}
+
+
+.newsInfoDate_zigzag > img {
+  height: 0.5rem;
+  object-fit: contain;
+}
+
+.sliderBlock {
+  visibility: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 18rem;
+  height: 24.125rem;
+  margin: 3.125rem auto 0;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slider img {
+  poiner-events: none;
+}
+
+.slider-list {
+  width: 18rem;
+  height: 24.125rem;
+  overflow: hidden;
+}
+
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing {
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide {
+  width: 18rem;
+  height: 24.125rem;
+  flex-shrink: 0;
+  font-size: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-arrows {
+  margin-top: 0.9375rem;
+  text-align: center;
+}
+
+.next,
+.prev {
+  background: none;
+  border: none;
+  margin: 0 0.625rem;
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
+
+.slider-arrows {
+  display: none;
+}
+
+.sliderDots {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.sliderDots_item1 {
+  width: 4.125rem;
+  height: 0.125rem;
+  background: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
+  border-radius: 0.625rem;
+}
+
+.sliderDots_item2 {
+  width: 4.125rem;
+  height: 0.125rem;
+  border-radius: 0.625rem;
+  background: #F0F8F6;
+}
+
+.sliderDots_item3 {
+  width: 4.125rem;
+  height: 0.125rem;
+  border-radius: 0.625rem;
+  background: #F0F8F6;
+}
+
+@media (max-width: 768px) {
+  .blockNews_wrapper {
+    margin: 1.875rem 0;
+    max-height: 31.25rem;
+  }
+  .newsInfoDate_text p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 150%;
+  }
+  .newsInfoDate {
+    margin: 1.125rem;
+  }
+}
+
+@media (max-width: 666px) {
+  .newsInfoDate_zigzag {
+    width: 3.75rem;
+    height: 3.375rem;
+  }
+  .threeGridNews {
+    display: none;
+  }
+  .newsInfoDate {
+    gap: 0.25rem;
+  }
+  .newsInfoDate_subtitle {
+    height: 0;
+  }
+  .threeGridNews_item {
+    padding-bottom: 0;
+    gap: 0;
+  }
+  .buttonSmall {
+    width: 7rem;
+    height: 1.875rem;
+    background: #F0F8F6;
+    border-radius: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01A3A4;
+  }
+  .buttonSmall p {
+    font-size: 0.625rem;
+    line-height: 150%;
+  }
+  .blockNews_wrapper {
+    gap: 0;
+  }
+  .slider {
+    margin: 1.25rem auto 0;
+  }
+  .sliderBlock {
+    visibility: visible;
+  }
+  .newsInfoDate_zigzag {
+    padding: 0.625rem 0;
+  }
+}

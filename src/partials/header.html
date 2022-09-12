@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="header">
+    <div class="header_wrapper" id="header_wrapper">
+        <div class="menu">
+            <a class="menu_item" href="#"><h5>Home</h5></a>
+            <div class="dropup">
+                <a class="dropbtn" href="#"><h5>Boxes</h5></a>
+                <div class="dropup-content">
+                    <a href="#">What's inside</a>
+                    <a href="#">Kiwi Eco Box</a>
+                </div>
+            </div>
+            <div class="menu_logo"><img src="/assets/images/logo.png"/></div>
+            <a class="menu_item" href="#"><h5>About</h5></a>
+            <a class="menu_item" href="#"><h5>Account</h5></a>
+        </div>
+        <div class="mobileMenu">
+            <div class="menu_logo"><img src="/assets/images/logo.png"/></div>
+            <div id="mobileNavBar" class="mobileNavBar">
+                <div class="menu_logo"><img src="/assets/images/logo.png"/></div>
+                <div class="menuMqBg"><img src="/assets/images/Bg.png"/></div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="menuMQ">
+
+                    <a class="menu_item" href="#"><h5>Home</h5></a>
+                    <div class="zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <a class="menu_item" href="#"><h5>What's inside</h5></a>
+                    <div class="zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <a class="menu_item" href="#"><h5>Kiwi Eco Box</h5></a>
+                    <div class="zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <a class="menu_item" href="#"><h5>About</h5></a>
+                    <div class="zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <a class="menu_item" href="#"><h5>Account</h5></a>
+                </div>
+            </div>
+            <span class="icon" onClick="openNav()">
+            <img src="/assets/images/hamburger-menu.png"/>
+        </span>
+        </div>
+    </div>
+</div>
+<script>
+    function openNav() {
+        document.getElementById("mobileNavBar").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileNavBar").style.width = "0%";
+    }
+</script>

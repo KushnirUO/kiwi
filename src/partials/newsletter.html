@@ -1,0 +1,65 @@
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+/>
+<div class="newsLetter" xmlns="http://www.w3.org/1999/html">
+    <div class="newsLetter_wrapper">
+
+        <div class="newsletterTitle">
+            <div class="newsletterTitle_text">
+                <div class="newsletter_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                <div>
+                    <p>Stay in the know</p>
+                    <h2>Hear about the latest sneak peaks and spoilers</h2>
+                </div>
+            </div>
+            <h1>
+                <div class="newsletterTitle_img">
+                    <img src="/assets/images/Im_17.png"/>
+                </div>
+                get CAUSEBOX delivered directly
+                <span class="newsCol">to your inbox!
+                    </span>
+            </h1>
+
+        </div>
+
+        <div class="newsletterForm">
+            <div class="newsletterForm_input">
+                <form id="subscribeForm">
+                    <div>
+                        <input type="email" name="email" maxlength="100" placeholder="Your email adress" class="newsInput1" required/>
+                    </div>
+                    <div class="formButton">
+                        <button data-fancybox="dialog" data-src="#dialog-content" class="button" type="submit"><h4>Sign
+                            up</h4></button>
+                    </div>
+                </form>
+                <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web terms of use and
+                    privacy and cookie policy</p>
+            </div>
+        </div>
+        <!-- Dialog Contents -->
+        <div id="dialog-content" class="newsLetterDialog" style="display:none;max-width:1000px;padding: 0;margin: 0;">
+            <div class="newsLetterDialog_wrapper">
+                <div class="newsLetterDialog_image">
+                    <img src="/assets/images/modalImg.png"/>
+                </div>
+                <div class="newsLetterDialog_info">
+                    <h2>Thank you for<span class="newsCol"> subscribing!</span></h2>
+                    <div class="newsletter_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <p>Now you will receive alerts when new news and boxes are released!</p>
+                    <button class="button btnDialog" onclick="closeNewsByClick()"><h4>GOOD</h4></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function closeNewsByClick() {
+        Fancybox.close();
+    }
+    Fancybox.show([{src: "#dialog-content", type: "inline"}]);
+    Fancybox.show([{src: "#dialog-content", type: "clone"}]);
+</script>

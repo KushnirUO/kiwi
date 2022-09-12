@@ -1,0 +1,135 @@
+
+.boxMonth {
+  background: #F0F8F6;
+  padding: 6.250rem 0;
+
+}
+
+.boxMonth_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 121rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.boxImage {
+  max-width: 37.25rem;
+  max-height: 33.375rem;
+  display: flex;
+  position: relative;
+  gap: 0.625rem;
+  width: 50%;
+}
+
+.boxImage_one {
+  width: 50%;
+}
+
+.boxImage_one > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.boxMonthInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 32.5rem;
+  gap: 1.875rem;
+  margin: 6.25rem;
+  width: 50%;
+}
+.boxMonthInfo_title{
+  display: flex;
+  align-items: center;
+}
+.boxMonthInfo p {
+  width: 100%;
+  max-width: 32.5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #696969;
+}
+
+.boxMonthInfo_button {
+  width: 17.5rem;
+  height: 4.375rem;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 2.1rem;
+    line-height: 150%;
+  }
+  h4 {
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  .boxMonthInfo p {
+    font-size: 0.7rem;
+  }
+  .boxMonth_wrapper {
+    gap: 5%;
+  }
+  .boxMonthInfo {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 666px) {
+  h2,h4{
+    font-family: "Advent Pro";
+    font-style: normal;
+    font-weight: 700;
+  }
+  h2{
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
+  h4{
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 150%;
+  }
+  .boxMonth_wrapper {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding-bottom: 1.25rem;
+  }
+  .boxMonthInfo_button {
+    width: 15.9375rem;
+    height: 3.75rem;
+  }
+  .boxMonth {
+    padding: 0 1rem;
+  }
+  .boxMonthInfo {
+    gap: 0;
+    margin: 0;
+  }
+  .boxMonthInfo, .boxImage {
+    width: 100%;
+  }
+  .boxMonthInfo p {
+    text-align: center;
+  }
+  .boxMonthInfo {
+    align-items: center;
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+  }
+  .boxMonthInfo_title{
+    flex-direction: column;
+  }
+
+}

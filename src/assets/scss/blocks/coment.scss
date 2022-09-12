@@ -1,0 +1,253 @@
+.commentBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+
+}
+
+.commentBlock_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentSlider_swiper {
+  margin: 10px;
+}
+
+.headingSwiper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentSlider {
+  display: flex;
+  align-items: center;
+  gap: 6.250rem;
+}
+
+.textSwiper {
+  display: flex;
+  max-width: 35.3125rem;
+  padding-top: 1.875rem;
+}
+
+.textSwiper_text p {
+  width: 100%;
+  max-width: 32.5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #696969;
+}
+
+.commentTitle p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #01A3A4;
+}
+
+.commentTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.commentSlider_Pic {
+  width: 31.75rem;
+}
+
+.commentSlider_Pic > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.zigzagSwiper > img {
+  height: 0.5rem;
+  object-fit: contain;
+}
+
+
+.slider2 {
+  position: relative;
+  width: 970px;
+  height: 400px;
+  /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+  user-select: none;
+  /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+  touch-action: pan-y;
+}
+
+/* Если где-то внутри слайдера будут изображения,
+то нужно задать им pointer-events: none,
+чтобы они не перетаскивались мышью */
+
+.next img {
+  pointer-events: none;
+}
+
+.prev img {
+  pointer-events: none;
+}
+
+.slider2-list {
+  width: 970px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider2-list.grab {
+  cursor: grab;
+}
+
+.slider2-list.grabbing {
+  cursor: grabbing;
+}
+
+.slider2-track {
+  display: flex;
+}
+
+.slide2 {
+  width: 970px;
+  height: 400px;
+  /* Чтобы слайды не сжимались */
+  flex-shrink: 0;
+  /* Увеличиваем и центрируем цифру внутри слайда */
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider2-arrows {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.next,
+.prev {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
+
+
+.swiperPic img {
+  display: none;
+}
+
+.ratingSwiper img {
+  display: flex;
+}
+
+
+.textSwiper_text {
+  max-height: 250px;
+  padding: 1rem;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+}
+
+.textSwiper_text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.textSwiper_text::-webkit-scrollbar-track {
+  background-color: #e5eae9;
+  border-radius: 10px;
+}
+
+.textSwiper_text::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  width: 10px;
+  background-image: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+
+.swiperPic {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+@media (max-width: 1024px) {
+  .slider2,.slider2-list,.slide2 {
+    width: 1024px;
+  }
+}
+@media (max-width: 768px) {
+  .slider2,.slider2-list,.slide2 {
+    width: 768px;
+  }
+  .textSwiper {
+    max-width: 23rem;
+  }
+  .textSwiper_text p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 150%;
+  }
+  .commentSlider_Pic {
+    width: 50%;
+    height: 60%;
+  }
+
+}
+
+@media (max-width: 666px) {
+  .commentSlider_Pic {
+    display: none;
+  }
+  .slider2,.slider2-list,.slide2 {
+    width: 320px;
+  }
+  .zigzagSwiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .headingSwiper {
+    flex-direction: column;
+  }
+  .commentTitle {
+    justify-content: center;
+    align-items: center;
+  }
+  .textSwiper {
+    padding-top: 0;
+  }
+  .ratingSwiper {
+    display: flex;
+  }
+  .swiperPic > img {
+    display: flex;
+  }
+  .swiperPic {
+    justify-content: center;
+  }
+
+}

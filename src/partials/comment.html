@@ -1,0 +1,284 @@
+<div class="commentBlock">
+    <div class="commentBlock_wrapper">
+        <div class="commentTitle">
+            <p>What do our</p>
+            <h2>clients say</h2>
+        </div>
+        <div class="commentSlider">
+            <div class="slider2">
+                <div class="slider2-list">
+                    <div class="slider2-track">
+                        <div class="slide2">
+                            <div class="commentSlider_Pic">
+                                <img src="/assets/images/slide.png"/>
+                            </div>
+
+                            <div class="commentSlider_swiper">
+                                <div class="swiperPic">
+                                    <img src="/assets/images/Mask Group.png"/>
+                                    <div class="headingSwiper">
+                                        <h5>Jessica T.</h5>
+                                        <div class="ratingSwiper">
+                                            <img src="/assets/images/rating.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zigzagSwiper"><img src="/assets/images/zigzag.png"/></div>
+                                <div class="textSwiper">
+                                    <div class="textSwiper_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. </p>
+                                        <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. </p>
+                                        <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide2">
+                            <div class="commentSlider_Pic">
+                                <img src="/assets/images/slide.png"/>
+                            </div>
+                            <div class="commentSlider_swiper">
+                                <div class="swiperPic">
+                                    <img src="/assets/images/Mask Group.png"/>
+                                    <div class="headingSwiper">
+                                        <h5>Jessica T.</h5>
+                                        <div class="ratingSwiper">
+                                            <img src="/assets/images/rating.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zigzagSwiper"><img src="/assets/images/zigzag.png"/></div>
+                                <div class="textSwiper">
+                                    <div class="textSwiper_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. </p>
+                                        <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. </p>
+                                        <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider2-arrows">
+                    <button type="button" class="prev"><img src="/assets/images/Arrow_left.png"/></button>
+                    <button type="button" class="next"><img src="/assets/images/Arrow_right.png"/></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slider1 = document.querySelector('.slider2'),
+            sliderList1 = slider1.querySelector('.slider2-list'),
+            sliderTrack1 = slider1.querySelector('.slider2-track'),
+            slides1 = slider1.querySelectorAll('.slide2'),
+            arrows1 = slider1.querySelector('.slider2-arrows'),
+            prev1 = arrows1.children[0],
+            next1 = arrows1.children[1],
+            slideWidth1 = slides1[0].offsetWidth,
+            slideIndex1 = 0,
+            posInit1 = 0,
+            posX11 = 0,
+            posX21 = 0,
+            posY11 = 0,
+            posY21 = 0,
+            posFinal1 = 0,
+            isSwipe1 = false,
+            isScroll1 = false,
+            allowSwipe1 = true,
+            transition1 = true,
+            nextTrf1 = 0,
+            prevTrf1 = 0,
+            lastTrf1 = --slides1.length * slideWidth1,
+            posThreshold1 = slides1[0].offsetWidth * 0.35,
+            trfRegExp1 = /([-0-9.]+(?=px))/,
+            getEvent1 = function () {
+                return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+            },
+            slide1 = function () {
+                if (transition1) {
+                    sliderTrack1.style.transition = 'transform .5s';
+                }
+                sliderTrack1.style.transform = `translate3d(-${slideIndex1 * slideWidth1}px, 0px, 0px)`;
+
+                prev1.classList.toggle('disabled', slideIndex1 === 0);
+                next1.classList.toggle('disabled', slideIndex1 === --slides1.length);
+            },
+            swipeStart1 = function () {
+                let evt = getEvent1();
+
+                if (allowSwipe1) {
+
+                    transition1 = true;
+
+                    nextTrf1 = (slideIndex1 + 1) * -slideWidth1;
+                    prevTrf1 = (slideIndex1 - 1) * -slideWidth1;
+
+                    posInit1 = posX11 = evt.clientX;
+                    posY11 = evt.clientY;
+
+                    sliderTrack1.style.transition = '';
+
+                    document.addEventListener('touchmove', swipeAction);
+                    document.addEventListener('mousemove', swipeAction);
+                    document.addEventListener('touchend', swipeEnd);
+                    document.addEventListener('mouseup', swipeEnd);
+
+                    sliderList1.classList.remove('grab');
+                    sliderList1.classList.add('grabbing');
+                }
+            },
+            swipeAction1 = function () {
+
+                let evt = getEvent1(),
+                    style = sliderTrack1.style.transform,
+                    transform = +style.match(trfRegExp1)[0];
+
+                posX21 = posX11 - evt.clientX;
+                posX11 = evt.clientX;
+
+                posY21 = posY11 - evt.clientY;
+                posY11 = evt.clientY;
+
+                // определение действия свайп или скролл
+                if (!isSwipe1 && !isScroll1) {
+                    let posY = Math.abs(posY21);
+                    if (posY > 7 || posX21 === 0) {
+                        isScroll1 = true;
+                        allowSwipe1 = false;
+                    } else if (posY < 7) {
+                        isSwipe1 = true;
+                    }
+                }
+
+                if (isSwipe1) {
+                    // запрет ухода влево на первом слайде
+                    if (slideIndex1 === 0) {
+                        if (posInit1 < posX11) {
+                            setTransform1(transform, 0);
+                            return;
+                        } else {
+                            allowSwipe1 = true;
+                        }
+                    }
+
+                    // запрет ухода вправо на последнем слайде
+                    if (slideIndex1 === --slides1.length) {
+                        if (posInit1 > posX11) {
+                            setTransform1(transform, lastTrf1);
+                            return;
+                        } else {
+                            allowSwipe1 = true;
+                        }
+                    }
+
+                    // запрет протаскивания дальше одного слайда
+                    if (posInit1 > posX11 && transform < nextTrf1 || posInit1 < posX11 && transform > prevTrf1) {
+                        reachEdge1();
+                        return;
+                    }
+
+                    // двигаем слайд
+                    sliderTrack1.style.transform = `translate3d(${transform - posX21}px, 0px, 0px)`;
+                }
+
+            },
+            swipeEnd1 = function () {
+                posFinal1 = posInit1 - posX11;
+
+                isScroll1 = false;
+                isSwipe1 = false;
+
+                document.removeEventListener('touchmove', swipeAction1);
+                document.removeEventListener('mousemove', swipeAction1);
+                document.removeEventListener('touchend', swipeEnd1);
+                document.removeEventListener('mouseup', swipeEnd1);
+
+                sliderList1.classList.add('grab');
+                sliderList1.classList.remove('grabbing');
+
+                if (allowSwipe1) {
+                    if (Math.abs(posFinal1) > posThreshold1) {
+                        if (posInit1 < posX11) {
+                            slideIndex1--;
+                        } else if (posInit1 > posX11) {
+                            slideIndex1++;
+                        }
+                    }
+
+                    if (posInit1 !== posX11) {
+                        allowSwipe1 = false;
+                        slide1();
+                    } else {
+                        allowSwipe1 = true;
+                    }
+
+                } else {
+                    allowSwipe1 = true;
+                }
+
+            },
+            setTransform1 = function (transform, comapreTransform) {
+                if (transform >= comapreTransform) {
+                    if (transform > comapreTransform) {
+                        sliderTrack1.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+                    }
+                }
+                allowSwipe1 = false;
+            },
+            reachEdge1 = function () {
+                transition1 = false;
+                swipeEnd1();
+                allowSwipe1 = true;
+            };
+
+        sliderTrack1.style.transform = 'translate3d(0px, 0px, 0px)';
+        sliderList1.classList.add('grab');
+
+        sliderTrack1.addEventListener('transitionend', () => allowSwipe1 = true);
+        slider1.addEventListener('touchstart', swipeStart1);
+        slider1.addEventListener('mousedown', swipeStart1);
+
+        arrows1.addEventListener('click', function () {
+            let target = event.target;
+
+            if (target.classList.contains('next')) {
+                slideIndex1++;
+            } else if (target.classList.contains('prev')) {
+                slideIndex1--;
+            } else {
+                return;
+            }
+
+            slide1();
+        });
+    </script>

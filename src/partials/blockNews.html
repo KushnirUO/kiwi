@@ -1,0 +1,341 @@
+<div class="blockNews">
+    <div class="blockNews_wrapper">
+        <div class="newsTitle"><h2>What's new in blog?</h2></div>
+        <div class="threeGridNews">
+            <div class="threeGridNews_item">
+                <div class="newsPic">
+                    <img alt="" src="/assets/images/news/1.png"/>
+                </div>
+                <div class="newsInfoDate">
+                    <div class="newsInfoDate_subtitle"><h5>Why KIWI Eco Box?</h5></div>
+                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <div class="newsInfoDate_text"><p>Get started by signing up for monthly subscription. We bring you
+                        an easy way to start your zero-waste journey</p></div>
+                    <div class="newsInfoDate_button">
+                        <div class="button buttonSmall"><p>Read more</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="threeGridNews_item">
+                <div class="newsPic">
+                    <img src="/assets/images/news/2.png"/>
+                </div>
+                <div class="newsInfoDate">
+                    <div class="newsInfoDate_subtitle"><h5>What Is Inside The April Kiwi Eco Box? Portable Lunch
+                        Box</h5></div>
+                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <div class="newsInfoDate_text"><p>Every month receive your box with essential products, but plastic
+                        free and safe for the environmentv</p></div>
+                    <div class="newsInfoDate_button">
+                        <div class="button buttonSmall">Read more</div>
+                    </div>
+                </div>
+            </div>
+            <div class="threeGridNews_item">
+                <div class="newsPic">
+                    <img src="/assets/images/news/3.png"/>
+                </div>
+                <div class="newsInfoDate">
+                    <div class="newsInfoDate_subtitle"><h5>Make a Difference</h5></div>
+                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <div class="newsInfoDate_text"><p>Small steps can lead to bigger changes, and now you are the
+                        change. Let's build community of people who care</p></div>
+                    <div class="newsInfoDate_button">
+                        <div class="button buttonSmall">Read more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sliderBlock">
+            <div class="slider">
+                <div class="slider-list">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <div class="threeGridNews_item">
+                                <div class="newsPic">
+                                    <img src="/assets/images/news/1.png"/>
+                                </div>
+                                <div class="newsInfoDate">
+                                    <div class="newsInfoDate_subtitle"><h5>Why KIWI Eco Box?</h5></div>
+                                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                                    <div class="newsInfoDate_text"><p>Get started by signing up for monthly
+                                        subscription. We bring you an easy way to start your zero-waste journey</p>
+                                    </div>
+                                    <div class="newsInfoDate_button">
+                                        <div class="buttonSmall"><p>Read more</p>
+                                            <div class="buttonPlus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="threeGridNews_item">
+                                <div class="newsPic">
+                                    <img src="/assets/images/news/2.png"/>
+                                </div>
+                                <div class="newsInfoDate">
+                                    <div class="newsInfoDate_subtitle"><h5>What Is Inside The April Kiwi Eco Box?
+                                        Portable Lunch Box</h5></div>
+                                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                                    <div class="newsInfoDate_text"><p>Every month receive your box with essential
+                                        products, but plastic free and safe for the environmentv</p></div>
+                                    <div class="newsInfoDate_button">
+                                        <div class="buttonSmall"><p>Read more</p>
+                                            <div class="buttonPlus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="threeGridNews_item">
+                                <div class="newsPic">
+                                    <img src="/assets/images/news/3.png"/>
+                                </div>
+                                <div class="newsInfoDate">
+                                    <div class="newsInfoDate_subtitle"><h5>Make a Difference</h5></div>
+                                    <div class="newsInfoDate_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                                    <div class="newsInfoDate_text"><p>Small steps can lead to bigger changes, and now
+                                        you are the change. Let's build community of people who care</p></div>
+                                    <div class="newsInfoDate_button">
+                                        <div class="buttonSmall"><p>Read more</p>
+                                            <div class="buttonPlus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliderDots">
+                    <div class="sliderDots_item1" id="sliderDots_item1" onclick="changePost1()"></div>
+                    <div class="sliderDots_item2" id="sliderDots_item2" onclick="changePost2()"></div>
+                    <div class="sliderDots_item3" id="sliderDots_item3" onclick="changePost3()"></div>
+                </div>
+                <div class="slider-arrows">
+                    <button type="button" class="prev">&larr;</button>
+                    <button type="button" class="next">&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let slider = document.querySelector('.slider'),
+        sliderList = slider.querySelector('.slider-list'),
+        sliderTrack = slider.querySelector('.slider-track'),
+        slides = slider.querySelectorAll('.slide'),
+        arrows = slider.querySelector('.slider-arrows'),
+        dots1 = document.getElementById("sliderDots_item1"),
+        dots2 = document.getElementById("sliderDots_item2"),
+        dots3 = document.getElementById("sliderDots_item3"),
+        prev = arrows.children[0],
+        next = arrows.children[1],
+        slideWidth = slides[0].offsetWidth,
+        slideIndex = 0,
+        posInit = 0,
+        posX1 = 0,
+        posX2 = 0,
+        posY1 = 0,
+        posY2 = 0,
+        posFinal = 0,
+        isSwipe = false,
+        isScroll = false,
+        allowSwipe = true,
+        transition = true,
+        nextTrf = 0,
+        prevTrf = 0,
+        lastTrf = --slides.length * slideWidth,
+        posThreshold = slides[0].offsetWidth * 0.35,
+        trfRegExp = /([-0-9.]+(?=px))/,
+
+
+        getEvent = function () {
+            return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+
+        },
+        slide = function () {
+
+            if (transition) {
+                sliderTrack.style.transition = 'transform .5s';
+            }
+            sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+            prev.classList.toggle('disabled', slideIndex === 0);
+            next.classList.toggle('disabled', slideIndex === --slides.length);
+        },
+        swipeStart = function () {
+            let evt = getEvent();
+            console.log(slideIndex);
+            if (allowSwipe) {
+
+                transition = true;
+
+                nextTrf = (slideIndex + 1) * -slideWidth;
+                prevTrf = (slideIndex - 1) * -slideWidth;
+
+                posInit = posX1 = evt.clientX;
+                posY1 = evt.clientY;
+
+                sliderTrack.style.transition = '';
+
+                document.addEventListener('touchmove', swipeAction);
+                document.addEventListener('mousemove', swipeAction);
+                document.addEventListener('touchend', swipeEnd);
+                document.addEventListener('mouseup', swipeEnd);
+
+                sliderList.classList.remove('grab');
+                sliderList.classList.add('grabbing');
+
+
+            }
+        },
+        swipeAction = function () {
+            let evt = getEvent(),
+                style = sliderTrack.style.transform,
+                transform = +style.match(trfRegExp)[0];
+
+            posX2 = posX1 - evt.clientX;
+            posX1 = evt.clientX;
+
+            posY2 = posY1 - evt.clientY;
+            posY1 = evt.clientY;
+
+            // определение действия свайп или скролл
+            if (!isSwipe && !isScroll) {
+                let posY = Math.abs(posY2);
+                if (posY > 7 || posX2 === 0) {
+                    isScroll = true;
+                    allowSwipe = false;
+                } else if (posY < 7) {
+                    isSwipe = true;
+                }
+            }
+
+            if (isSwipe) {
+                // запрет ухода влево на первом слайде
+                if (slideIndex === 0) {
+                    if (posInit < posX1) {
+                        setTransform(transform, 0);
+                        return;
+                    } else {
+                        allowSwipe = true;
+                    }
+                }
+
+                // запрет ухода вправо на последнем слайде
+                if (slideIndex === --slides.length) {
+                    if (posInit > posX1) {
+                        setTransform(transform, lastTrf);
+                        return;
+                    } else {
+                        allowSwipe = true;
+                    }
+                }
+
+                // запрет протаскивания дальше одного слайда
+                if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+                    reachEdge();
+                    return;
+                }
+                // двигаем слайд
+                sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+
+            }
+
+        },
+        swipeEnd = function () {
+            posFinal = posInit - posX1;
+            console.log(slideIndex);
+            isScroll = false;
+            isSwipe = false;
+
+            document.removeEventListener('touchmove', swipeAction);
+            document.removeEventListener('mousemove', swipeAction);
+            document.removeEventListener('touchend', swipeEnd);
+            document.removeEventListener('mouseup', swipeEnd);
+
+            sliderList.classList.add('grab');
+            sliderList.classList.remove('grabbing');
+
+            if (allowSwipe) {
+                if (Math.abs(posFinal) > posThreshold) {
+                    if (posInit < posX1) {
+                        slideIndex--;
+                    } else if (posInit > posX1) {
+                        slideIndex++;
+                    }
+                }
+
+                if (posInit !== posX1) {
+                    allowSwipe = false;
+                    slide();
+                } else {
+                    allowSwipe = true;
+                }
+                if (slideIndex === 0) changePost1();
+                if (slideIndex === 1) changePost2();
+                if (slideIndex === 2) changePost3();
+
+            } else {
+                allowSwipe = true;
+            }
+
+        },
+        setTransform = function (transform, comapreTransform) {
+            if (transform >= comapreTransform) {
+                if (transform > comapreTransform) {
+                    sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+                }
+            }
+            allowSwipe = false;
+        },
+        reachEdge = function () {
+            transition = false;
+            swipeEnd();
+            allowSwipe = true;
+        };
+
+    sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+    sliderList.classList.add('grab');
+
+    sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+    slider.addEventListener('touchstart', swipeStart);
+    slider.addEventListener('mousedown', swipeStart);
+    changePost1 = function () {
+        slideIndex = 0;
+        dots1.style.background = "linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%)"
+        dots2.style.background = "#F0F8F6"
+        dots3.style.background = "#F0F8F6"
+        slide();
+
+    }
+    changePost2 = function () {
+        slideIndex = 1;
+        dots2.style.background = "linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%)"
+        dots1.style.background = "#F0F8F6"
+        dots3.style.background = "#F0F8F6"
+        slide();
+    }
+    changePost3 = function () {
+        slideIndex = 2;
+        dots3.style.background = "linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%)"
+        dots2.style.background = "#F0F8F6"
+        dots1.style.background = "#F0F8F6"
+        slide();
+    }
+    arrows.addEventListener('click', function () {
+        let target = event.target;
+
+        if (target.classList.contains('next')) {
+            slideIndex++;
+        } else if (target.classList.contains('prev')) {
+            slideIndex--;
+        } else {
+            return;
+        }
+        slide();
+    });
+</script>

@@ -2,13 +2,18 @@
   display: flex;
   justify-content: center;
   height: 11.875rem;
-  margin: 3.125rem 0;
+  margin: 6.125rem 0;
 }
-
+.footer a{
+  text-decoration: none;
+  color: #212121;
+}
 .footer_wrapper {
   display: flex;
   align-items: center;
   gap: 15.1875rem;
+  background-color: white;
+  z-index: 1;
 }
 
 .footerMenu {
@@ -66,19 +71,29 @@
   display: flex;
   justify-content:space-around;
 }
-
+@media (max-width: 1280px) {
+  .footer_wrapper {
+    gap: 7.1875rem;
+  }
+}
 @media (max-width: 1024px) {
   .footer_wrapper,.footerMenu, .footerContact {
     gap: 1.25rem;
   }
 }
-
+@media (max-width: 768px){
+  .footer_wrapper, .footerMenu, .footerContact {
+    gap: 0.7rem;
+  }
+}
 @media (max-width: 666px) {
   .footerLogo {
     display: none;
   }
   .footerMenu,.footerContact,.footer_wrapper {
     flex-direction: column;
+    gap: 1.875rem;
+
   }
   .footerLogoMQ{
     display: flex;

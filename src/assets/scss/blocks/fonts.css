@@ -82,7 +82,13 @@
 }
 @font-face {
     font-family: "Bebas Neue";
-    src: url("./bebasneuebold.woff2") format("woff2");
+    src: url("../fonts/bebasneuebold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Advent Pro";
+    src: url("../fonts/Adventprobold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
 }

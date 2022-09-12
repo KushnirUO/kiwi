@@ -2,7 +2,10 @@
 .boxMonth {
   background: #F0F8F6;
   padding: 6.250rem 0;
-
+  text-decoration: none;
+}
+.boxMonth a{
+  text-decoration: none;
 }
 
 .boxMonth_wrapper {
@@ -22,6 +25,38 @@
   gap: 0.625rem;
   width: 50%;
 }
+.boxMonthDesignImage{
+  position: relative;
+  z-index: 1;
+}
+.boxMonthDesignImage_elTop{
+  top:-21px;
+  left:-13px;
+}
+.boxMonthDesignImage_stuff{
+  top: 172px;
+  left: -236px;
+}
+.boxMonthDesignImage_leaf{
+  top: -61px;
+  left: 140px;
+  z-index: -1;
+}
+
+.boxMonthDesignImage_elTop,.boxMonthDesignImage_elBotMQ,.boxMonthDesignImage_elBot,.boxMonthDesignImage_leaf,.boxMonthDesignImage_stuff{
+  position: absolute;
+}
+.boxMonthDesignImage_elBot{
+  right: -29px;
+  bottom: -34px;
+}
+.boxMonthDesignImage_elBotMQ{
+  right: 52px;
+  bottom: 37px;
+  display: none;
+}
+
+
 
 .boxImage_one {
   width: 50%;
@@ -56,6 +91,8 @@
 }
 
 .boxMonthInfo_button {
+  position: relative;
+  z-index: 1;
   width: 17.5rem;
   height: 4.375rem;
 }
@@ -79,8 +116,19 @@
     margin: 0 20px 0 0;
   }
 }
-
+@media (max-width: 768px) {
+  .boxMonthDesignImage_stuff, .boxMonthDesignImage_leaf,.boxMonthDesignImage_elTop {
+    display: none;
+  }
+}
 @media (max-width: 666px) {
+  .boxMonthDesignImage_elBotMQ{
+    display: flex;
+  }
+  .boxMonthDesignImage_elBot {
+    right: -16px;
+    bottom: -13px;
+  }
   h2,h4{
     font-family: "Advent Pro";
     font-style: normal;
@@ -125,7 +173,7 @@
   }
   .boxMonthInfo {
     align-items: center;
-    margin-top: 1.25rem;
+    margin: 1.25rem 0;
     gap: 1.25rem;
   }
   .boxMonthInfo_title{

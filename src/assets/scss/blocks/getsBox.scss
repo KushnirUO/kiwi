@@ -23,7 +23,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  gap: 1.25rem;
+  gap: 2.5rem;
 
 }
 
@@ -34,6 +34,21 @@
   gap: 1.25rem;
 
 }
+.getsBoxBabel{
+  position: relative;
+}
+.getsBoxBabelPink{
+  position: absolute;
+  right: 567px;
+  top: 93px;
+}
+.getsBoxBabelGreen{
+  position: absolute;
+  right: 1px;
+  top: 21px;
+  z-index: -1;
+}
+
 
 .infoItem p {
   width: 100%;
@@ -54,6 +69,7 @@
 }
 
 .getBoxBtn {
+  text-decoration: none;
   width: 17.5rem;
   height: 4.375rem;
 }
@@ -88,6 +104,9 @@
 }
 
 @media (max-width: 666px) {
+  .getsBoxBabelGreen{
+    display: none;
+  }
   .getBox_wrapper {
     margin: 3.25rem;
   }

@@ -1,11 +1,16 @@
 .promo {
   display: flex;
+  z-index: -1;
+  background: linear-gradient(129.34deg, #FECA57 56.78%, #E3AA2D 101.94%);
 }
 
 .promoImage {
   position: absolute;
   width: 100%;
   object-fit: contain;
+}
+.promo a{
+  text-decoration: none;
 }
 
 .promo_wrapper {
@@ -26,7 +31,7 @@
 .promoTitle_sub {
   position: absolute;
   top: 288px;
-  right: 500px;
+  right: 400px;
 }
 
 .promoTitle_sub p, .promoTitle_sub1 p {
@@ -46,7 +51,7 @@
 
 .promoButton {
   width: 280px;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -79,11 +84,25 @@
   display: none;
 }
 
-.promoImage_itemBox {
+.promoImage_el13,.promoImage_el14,.promoImage_el15,.promoImage_el16,.promoImage_el17,.promoImage_el18{
   position: absolute;
-  top: 146px;
+
 }
-.promoImage_lineMQ{
+.promoImage_v6,.promoImage_v7,.promoImage_v8,.promoImage_v9{
+  position: absolute;
+}
+.promoImage_el13{top: 300px; left: 17%;}
+.promoImage_el14{right: 15%; top: 564px;}
+.promoImage_el15{right: 4%; top: 348px;}
+.promoImage_el16{top: 614px;left: 8%;}
+.promoImage_el17{top: 379px;left: 11%;}
+.promoImage_el18{top: 363px;  right: 17%;}
+.promoImage_v6{top: 520px;left: 13%;}
+.promoImage_v7{top: 360px;left: 28%;}
+.promoImage_v8{top: 650px;right: 28%;}
+.promoImage_v9{top: 665px;right: 12%;}
+
+  .promoImage_lineMQ{
   display: none;
 }
 .promoLine1, .promoLine2, .promoLine3, .promoLine4 {
@@ -107,51 +126,65 @@
 }
 .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
   position: absolute;
+  top: 400px;
 }
 
 .promoImage_item1 img, .promoImage_item2 img, .promoImage_item3 img, .promoImage_item4 img {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
+  width: 100%;
+  object-fit: contain;
 }
 
+
+.promoImage_itemBox {
+  position: absolute;
+  top: 146px;
+  width: 40%;
+}
+.promoImage_itemBox img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
 .promoImage_item1 {
-  top: 400px;
-  left: 10px;
+  width: 17%;
+  left: 4%;
 }
 
 .promoImage_item1 img {
-  top: 20px;
-  right: -36px;
+top: 10%;
 }
 
 .promoImage_item2 {
-  top: 400px;
-  left: 300px;
+  width: 24%;
+  left: 20%;
 }
 
 .promoImage_item2 img {
-  top: -95px;
-  right: -149px;
+  top: -16%;
+  left: -20%;
 }
 
 .promoImage_item3 {
-  top: 400px;
-  right: 300px;
+  width: 30%;
+  right: 3%;
 }
 
 .promoImage_item3 img {
-  top: -95px;
-  left: -150px
+  top: -27%;
+  right: 20%;
 }
 
 .promoImage_item4 {
-  top: 400px;
-  right: 41px;
+  width: 18%;
+  right: 0%;
 }
 
 .promoImage_item4 img {
-  top: -23px;
-  right: -33px;
+  top: 5%;
+  right: 11%;
 }
 
 .babel {
@@ -164,15 +197,15 @@
 }
 
 @media (max-width: 1680px) {
-  .promoImage_itemBox img {
-    width: 69%;
-  }
-  .promoImage_itemBox{
-    top: 216px;
-    left: 29%;
-  }
   .promo_wrapper {
     padding: 24px 0;
+  }
+  .promoTitle_sub{
+    right: 344px;
+  }
+  .babel {
+    width: 125px;
+    height: 125px;
   }
 
 }
@@ -180,18 +213,32 @@
   .promo_wrapper {
     height: 688px;
   }
+  .babel {
+    width: 100px;
+    height: 100px;
+  }
+  .promoTitle_sub{
+    top: 237px;
+    right: 285px;
+  }
+  .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
+    top: 325px;
+  }
+  .promoImage_v6{top: 445px;}
+  .promoImage_v7{top: 285px;}
+  .promoImage_v8{top: 510px;}
+  .promoImage_v9{top: 510px;}
+
+  .promoImage_el13{top: 225px;}
+  .promoImage_el14{top: 490px;}
+  .promoImage_el15{top: 275px;}
+  .promoImage_el16{top: 550px;}
+  .promoImage_el17{top: 300px;}
+  .promoImage_el18{top: 290px;}
   }
 @media (max-width: 1367px) {
   .promo_wrapper {
     height: 570px;
-  }
-  .promoImage_itemBox img {
-    width: 50%;
-    right: 100px;
-  }
-  .promoImage_itemBox {
-    right: 11px;
-
   }
   .promoTitle_sub p {
     font-size: 56px;
@@ -201,43 +248,24 @@
     font-size: 74px;
     line-height: 74px;
   }
-  .babel {
-    width: 50px;
-    height: 50px;
-  }
-  .promoImage_item1 img, .promoImage_item2 img, .promoImage_item3 img, .promoImage_item4 img {
-    width: 100%;
-  }
-  .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
-    top: 290px;
-  }
-  .promoImage_item1 img {
-    top: 28px;
-    right: -10px;
-  }
-  .promoImage_item2 img {
-    top: 15px;
-    right: 4px;
-  }
-  .promoImage_item3 img {
-    top: 16px;
-    left: 10px;
-  }
-  .promoImage_item4 img {
-    top: 24px;
-    right: 5px;
-  }
-  .promoImage_itemBox {
-    top: 180px;
-    left: 34%;
-  }
-
+  .promoImage_v6{top: 355px;}
+  .promoImage_v7{top: 285px;}
+  .promoImage_v8{top: 465px;}
+  .promoImage_v9{top: 465px;}
 }
 
 @media (max-width: 1280px) {
   .promo_wrapper {
     height: 580px;
   }
+  .babel {
+    width: 55px;
+    height: 55px;
+  }
+  .promoTitle_sub {
+    right: 213px;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -245,28 +273,27 @@
     padding: 10px 0;
     height: 500px;
   }
-  .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
-    top: 200px;
-  }
-  .promoImage_item3 {
-    right: 200px;
-  }
-  .promoImage_item2 {
-    left: 175px;
-  }
-  .promoImage_itemBox {
-    left: 29%;
-    top: 110px;
-    right: 10px;
-  }
   .promoTitle_sub {
     top: 227px;
     right: 266px;
   }
-  .promoImage_itemBox img {
-    width: 55%;
+  .babel {
+    width: 40px;
+    height: 40px;
   }
-}
+  .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
+    top: 200px;
+  }
+  .promoImage_v6,.promoImage_v7,.promoImage_v8,.promoImage_v9{
+    display: none;
+  }
+    .promoImage_el13{top: 100px;}
+  .promoImage_el14{top: 285px;}
+  .promoImage_el15{top: 100px;}
+  .promoImage_el16{top: 315px;}
+  .promoImage_el17{top: 170px;}
+  .promoImage_el18{top: 115px;}
+  }
 
 @media (max-width: 768px) {
   .promo_wrapper {
@@ -284,37 +311,37 @@
     top: 191px;
     right: 179px;
   }
-  .promoImage_itemBox img {
-    width: 70%;
+  .babel {
+    width: 10px;
+    height: 10px;
   }
   .promoImage_itemBox {
-    right: 0;
-    width: 400px;
-    left: 233px;
-  }
-  .babel {
-    width: 25px;
-    height: 25px;
-  }
-  .promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
-    top: 145px;
-  }
-  .promoImage_item2 {
-    left: 144px;
-  }
-  .promoImage_item4 {
-    right: 9px;
-  }
-  .promoImage_item3 {
-    right: 139px;
+    top: 60px;
   }
 }
+
+
+  //.promoImage_item1, .promoImage_item2, .promoImage_item3, .promoImage_item4 {
+  //  top: 145px;
+  //}
+
+@media (max-width: 666px) {
+    .promoImage_itemBox {
+        width: 64%;
+        left: 17%;
+        top: 106px;
+      }
+    .promoTitle_sub{
+      display: none;
+    }
+  }
+
 
 @media (max-width: 666px) {
   .promo {
     background: linear-gradient(129.34deg, #feca57 56.78%, #e3aa2d 101.94%);
   }
-  .promoImage_bg, .promoTitle_sub {
+  .promoImage_bg, .promoTitle_sub,.promoImage_el13,.promoImage_el14,.promoImage_el15,.promoImage_el16,.promoImage_el17,.promoImage_el18{
     display: none;
   }
   .promoTitle_sub1 {
@@ -335,14 +362,7 @@
     width: 288px;
     height: 60px;
   }
-  .promoImage_itemBox {
-    width: 91%;
-    left: 26px;
-    top: 164px;
-  }
-  .promoImage_itemBox img {
-    width: 81%;
-  }
+
   .babel {
     width: 5px;
     height: 5px;
@@ -355,32 +375,51 @@
     top: 11px;
     right: -5px;
   }
-  .promoImage_item4 img {
-    top: 10px;
-    right: 2px;
-  }
+
   .promoImage_item2 {
     left: inherit;
-    right: 74px;
+    right: 25%;
     width: 72px;
     height: 74px;
   }
   .promoImage_item3 {
     right: inherit;
-    left: 96px;
+    left: 25%;
+    width: 60px;
+    height: 70px;
   }
-  .promoImage_item2 img {
-    top: -8px;
-    right: 6px;
-    width: 72px;
-    height: 74px;
+  .promoImage_item1 {
+    left: 1%;
+  }
+    .promoImage_item2 img {
+      top: -3px;
+      right: -4px;
+      width: 120%;
   }
   .promoImage_item3 img {
-    width: 200%;
-    top: -13px;
-    left: -27px;
+    width: 204%;
+    top: -16%;
+    left: -40%;
   }
   .promoImage_lineMQ{
     display: flex;
+  }
+
+
+  .promoImage_item4 {
+    right: 1%;
+    width: 65px;
+    height: 70px;
+  }
+  .promoImage_item4 img {
+    width: 65px;
+    height: 70px;
+  }
+}
+@media (max-width: 426px) {
+  .promoImage_itemBox {
+    width: 93%;
+    left: 0%;
+    top: 130px;
   }
 }

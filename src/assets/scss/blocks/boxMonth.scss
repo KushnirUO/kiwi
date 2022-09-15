@@ -22,33 +22,36 @@
   max-height: 33.375rem;
   display: flex;
   position: relative;
-  gap: 0.625rem;
+  gap: 30px;
   width: 50%;
+  z-index: 1;
 }
 .boxMonthDesignImage{
   position: relative;
-  z-index: 1;
 }
 .boxMonthDesignImage_elTop{
-  top:-21px;
-  left:-13px;
+  top: -28px;
+  left: 2px;
 }
 .boxMonthDesignImage_stuff{
   top: 172px;
-  left: -236px;
+  left: -220px;
 }
 .boxMonthDesignImage_leaf{
   top: -61px;
   left: 140px;
   z-index: -1;
 }
-
+.button h4{
+  font-size: 29px;
+  line-height: 29px;
+}
 .boxMonthDesignImage_elTop,.boxMonthDesignImage_elBotMQ,.boxMonthDesignImage_elBot,.boxMonthDesignImage_leaf,.boxMonthDesignImage_stuff{
   position: absolute;
 }
 .boxMonthDesignImage_elBot{
-  right: -29px;
-  bottom: -34px;
+  right: -33px;
+  bottom: -28px;
 }
 .boxMonthDesignImage_elBotMQ{
   right: 52px;
@@ -56,7 +59,9 @@
   display: none;
 }
 
-
+.boxMonthDesignImage_stuff{
+  z-index: 2;
+}
 
 .boxImage_one {
   width: 50%;
@@ -96,7 +101,12 @@
   width: 17.5rem;
   height: 4.375rem;
 }
-
+.boxMonthInfo_buttonMQ{
+  display: none;
+  width: 17.5rem;
+  height: 3.75rem;
+  padding-top: 20px;
+}
 @media (max-width: 1024px) {
   h2 {
     font-size: 2.1rem;
@@ -107,7 +117,8 @@
     line-height: 150%;
   }
   .boxMonthInfo p {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
   }
   .boxMonth_wrapper {
     gap: 5%;
@@ -122,6 +133,11 @@
   }
 }
 @media (max-width: 666px) {
+  .boxImage{
+    gap: 10px;
+  }
+  .boxMonthInfo_button{display: none;}
+  .boxMonthInfo_buttonMQ{display: flex}
   .boxMonthDesignImage_elBotMQ{
     display: flex;
   }
@@ -152,14 +168,13 @@
   .boxMonth_wrapper {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    padding-bottom: 1.25rem;
   }
   .boxMonthInfo_button {
     width: 15.9375rem;
     height: 3.75rem;
   }
   .boxMonth {
-    padding: 0 1rem;
+    padding: 3.125rem 1rem 1.625rem;
   }
   .boxMonthInfo {
     gap: 0;
@@ -169,15 +184,17 @@
     width: 100%;
   }
   .boxMonthInfo p {
+    max-width: 16.75rem;
     text-align: center;
   }
   .boxMonthInfo {
     align-items: center;
-    margin: 1.25rem 0;
+    margin: 0 0 1.25rem;
     gap: 1.25rem;
   }
   .boxMonthInfo_title{
     flex-direction: column;
+    gap: 20px;
   }
 
 }

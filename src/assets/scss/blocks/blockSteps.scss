@@ -4,39 +4,58 @@
   justify-content: center;
   align-items: center;
   gap: 3.125rem;
-  margin: 6.25rem 0;
+  margin: 6.25rem 0 2.75rem;
 }
 .stepsText{
   display: flex;
   flex-direction: column;
-  max-width: 69.375rem;
+  max-width: 121rem;
 
+}
+.stepsPic{
+  padding-bottom: 100px;
+}
+.stepsText h1{
+  max-width: 81.6rem;
 }
 .stepsText_our{
   display: flex;
   align-items: center;
+  padding-bottom: 20px;
 }
 .stepsText_our p{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25em;
   color: #01A3A4;
 }
 .stepCaption{
-  display: flex;
-  justify-content: flex-end;
   font-family: 'Galada';
   font-style: normal;
   font-weight: 400;
   font-size: 4.5rem;
   line-height: 7.3125rem;
-  margin: 0;
   text-align: center;
   background: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 42.2rem;
 }
 .blockStep_line > img{
   position: absolute;
   right: 0;
   z-index: -1;
+}
+@media (max-width: 1366px) {
+  .stepsPic, .blockStep_line{display: none}
+  .stepCaption{margin-left: 0;}
+  .stepsText h1{text-align: center;}
+  .stepsText_our{justify-content: center;text-align: center;}
 }
 @media (max-width: 1024px) {
   h1{
@@ -59,33 +78,44 @@
   }
 }
 @media (max-width: 666px) {
+  .stepsText_our p{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+}
+  .stepsPic{
+    display: flex;
+    padding: 0;
+  }
+  .stepsPic img{
+    width: 76px;
+  }
  h1{
    font-size: 2rem;
    line-height: 2rem;
  }
   .stepCaption{
     font-size: 1.625rem;
-    line-height: 1.625rem;
+    line-height: 42px;
   }
   .stepsText_our{
     flex-direction: column;
   }
   .blockStep_box{
     flex-direction: column-reverse;
+    gap: 0;
   }
   .blockStep_line > img {
     display: none;
   }
   .stepsText {
     text-align: center;
-    gap: 1rem;
   }
   .stepCaption {
   justify-content: center;
   }
   .blockStep_box {
-  margin: 3.3rem 0 2rem;
-    gap: 1rem;
+  margin: 3.375rem 0 2.1875rem;
   }
-
   }

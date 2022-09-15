@@ -2,24 +2,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 0;
-
+  padding: 100px 0;
+  position: relative;
 }
 
 .commentBlock_wrapper {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .commentSlider_swiper {
   margin: 10px;
+  max-width: 625px;
 }
 
 .headingSwiper {
   display: flex;
   justify-content: space-between;
+  gap: 363px;
+}
+
+.zigzagSwiper {
+  height: 45px;
 }
 
 .commentSlider {
@@ -27,42 +32,64 @@
   align-items: center;
   gap: 6.250rem;
 }
-.commentImg{
+
+.commentImg {
   position: relative;
 }
-.commentImg_zigzag,.commentImg_el14,.commentImg_el15,.commentImg_el25,.commentImg_db{
+
+.commentImg_zigzag, .commentImg_el14, .commentImg_el15, .commentImg_el25, .commentImg_db {
   position: absolute;
 }
-.commentImg_zigzag{
-  left: 122%;
+
+.commentImg_zigzag {
+  right: 0;
 }
-.commentImg_el14{
-  top: 102%;
+
+.commentImg_el14 {
+  bottom: -48px;
+  left: 100px;
+  z-index: -1;
 }
-.commentImg_el15{
-  top: 102%;
-  left: 11%;
+
+.commentImg_el15 {
+  left: 202px;
+  bottom: 16px;
 }
-.commentImg_el25{
-  left: 120%;
+
+.commentImg_el25 {
+  right: 166px;
 }
-.commentImg_db{
-  left: -480px;
+
+.commentImg_db {
+  left: 0px;
+  z-index: -1;
 }
+
+.commentImg_dbMQ {
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  z-index: -1;
+}
+
 .textSwiper {
   display: flex;
-  max-width: 35.3125rem;
   padding-top: 1.875rem;
+  position: relative;
+  webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 90%);
+
 }
 
 .textSwiper_text p {
   width: 100%;
-  max-width: 32.5rem;
+  max-width: 35.3125rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 150%;
+  line-height: 180%;
   color: #696969;
 }
 
@@ -102,17 +129,13 @@
 
 .slider2 {
   position: relative;
-  width: 970px;
-  height: 400px;
+  width: 1330px;
+  height: 466px;
   /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
   user-select: none;
   /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
   touch-action: pan-y;
 }
-
-/* Если где-то внутри слайдера будут изображения,
-то нужно задать им pointer-events: none,
-чтобы они не перетаскивались мышью */
 
 .next img {
   pointer-events: none;
@@ -123,8 +146,8 @@
 }
 
 .slider2-list {
-  width: 970px;
-  height: 400px;
+  width: 1330px;
+  height: 466px;
   overflow: hidden;
 }
 
@@ -141,8 +164,8 @@
 }
 
 .slide2 {
-  width: 970px;
-  height: 400px;
+  width: 1330px;
+  height: 466px;
   /* Чтобы слайды не сжимались */
   flex-shrink: 0;
   /* Увеличиваем и центрируем цифру внутри слайда */
@@ -150,11 +173,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 100px;
 }
 
 .slider2-arrows {
-  margin-top: 15px;
+  margin-left: 76px;
   text-align: center;
 }
 
@@ -162,7 +185,7 @@
 .prev {
   background: none;
   border: none;
-  margin: 0 10px;
+  margin: 0;
   font-size: 30px;
   cursor: pointer;
 }
@@ -184,8 +207,11 @@
 
 
 .textSwiper_text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 53px 53px 0;
+  gap: 20px;
   max-height: 250px;
-  padding: 1rem;
   overflow-y: auto;
   direction: ltr;
   scrollbar-color: #d4aa70 #e4e4e4;
@@ -197,8 +223,20 @@
 }
 
 .textSwiper_text::-webkit-scrollbar-track {
-  background-color: #e5eae9;
-  border-radius: 10px;
+  //background-color: #e5eae9;
+
+}
+
+.textSwiper_line {
+  position: absolute;
+  width: 281px;
+  height: 1px;
+  right: -138px;
+  top: 170px;
+  background: #74E6CF;
+  border-radius: 50px;
+  transform: rotate(90deg);
+  z-index: -1;
 }
 
 .textSwiper_text::-webkit-scrollbar-thumb {
@@ -211,34 +249,48 @@
 .swiperPic {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
   gap: 10px;
 }
-@media (max-width: 1920px){
-  .commentImg_db {
-    left: -224px;
-  }
-  .commentImg_el25,.commentImg_zigzag{
-    left: 98%;
-  }
+
+@media (max-width: 1920px) {
+
 }
+
 @media (max-width: 1440px) {
-  .commentImg_el25,.commentImg_zigzag{
-    left: 77%;
+  .slider2, .slider2-list, .slide2 {
+    width: 1000px;
   }
+  .headingSwiper {
+    gap: 230px;
+  }
+
 }
+
 @media (max-width: 1024px) {
-  .commentImg_el25,.commentImg_zigzag,.commentImg_el14,.commentImg_el15 {
+  .commentImg_el25, .commentImg_zigzag, .commentImg_el14, .commentImg_el15, .commentImg_db {
     display: none;
   }
-    .slider2,.slider2-list,.slide2 {
+  .slider2, .slider2-list, .slide2 {
     width: 768px;
   }
+  .headingSwiper {
+    gap: 100px;
+  }
+  .slide2 {
+    gap: 10px;
+  }
 }
-@media (max-width: 768px) {
 
-    .slider2,.slider2-list,.slide2 {
-    width: 666px;
+@media (max-width: 768px) {
+  .headingSwiper {
+    gap: 100px;
+  }
+  .slide2 {
+    gap: 10px;
+  }
+  .slider2, .slider2-list, .slide2 {
+    width: 650px;
   }
   .textSwiper {
     max-width: 23rem;
@@ -258,11 +310,21 @@
 }
 
 @media (max-width: 666px) {
+  .commentBlock {
+    padding: 50px 0;
+  }
   .commentSlider_Pic {
     display: none;
   }
-  .slider2,.slider2-list,.slide2 {
+  .slider2, .slider2-list, .slide2 {
     width: 320px;
+    height: 320px;
+  }
+  .zigzagSwiper {
+    height: 38px;
+  }
+  .slide2 {
+    align-items: flex-start;
   }
   .zigzagSwiper {
     display: flex;
@@ -271,10 +333,22 @@
   }
   .headingSwiper {
     flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+  .headingSwiper h5 {
+    font-family: 'Advent Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
   }
   .commentTitle {
     justify-content: center;
     align-items: center;
+    gap: 0.625rem;
+    padding-bottom: 15px;
   }
   .textSwiper {
     padding-top: 0;
@@ -284,14 +358,30 @@
   }
   .swiperPic > img {
     display: flex;
+
   }
   .swiperPic {
     justify-content: center;
+    padding: 0;
   }
-
+  .textSwiper_text p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .textSwiper_text {
+    padding: 0 0.5rem;
+    gap: 8px;
+    max-height: 220px;
+  }
+  .slider2-arrows {
+    margin: 0;
+  }
+  .commentImg_dbMQ {
+    display: flex;
+    width: 51px;
+    height: 42px;
+  }
 }
-//.commentImg_zigzag,
-//.commentImg_el14,
-//.commentImg_el15,
-//.commentImg_el25,
-//.commentImg_db{

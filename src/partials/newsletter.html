@@ -3,8 +3,13 @@
         href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
 />
 <div class="newsLetter" xmlns="http://www.w3.org/1999/html">
+    <div class="newsletterTitle_img">
+        <img src="/assets/images/Im_17.png"/>
+    </div>
+    <div class="newsletterTitle_imgMQ">
+        <img src="/assets/images/Im_177.png"/>
+    </div>
     <div class="newsLetter_wrapper">
-
         <div class="newsletterTitle">
             <div class="newsletterTitle_text">
                 <div class="newsletter_zigzag"><img src="/assets/images/zigzag.png"/></div>
@@ -26,20 +31,20 @@
                 <div class="newsletter_imgMonst">
                     <img src="/assets/images/Im_Monstera.png"/>
                 </div>
-                <div class="newsletterTitle_img">
-                    <img src="/assets/images/Im_17.png"/>
-                </div>
                 <form id="subscribeForm">
                     <div class="subscribeForm_wrapper">
-                        <input type="email" name="email" maxlength="100" placeholder="Your email adress" class="newsInput1" required/>
-                    </div>
-                    <div class="formButton">
-                        <button data-fancybox="dialog" data-src="#dialog-content" class="button" type="submit"><h4>Sign
-                            up</h4></button>
+                        <div>
+                            <input type="email" name="email" maxlength="100" placeholder="Your email adress" class="newsInput1" required/>
+                        </div>
+                        <div class="formButton">
+                            <button type="submit" class="button"><h4>Sign up</h4></button>
+                        </div>
                     </div>
                 </form>
-                <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web terms of use and
-                    privacy and cookie policy</p>
+                <div class="newsUnderText">
+                    <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web <a href="#">terms of use</a> and
+                        <a href="#">privacy and cookie policy</a></p>
+                </div>
             </div>
         </div>
         <!-- Dialog Contents -->
@@ -50,7 +55,7 @@
                 </div>
                 <div class="newsLetterDialog_info">
                     <h2>Thank you for<span class="newsCol"> subscribing!</span></h2>
-                    <div class="newsletter_zigzag"><img src="/assets/images/zigzag.png"/></div>
+                    <div class="newsletter_zigzagD"><img src="/assets/images/zigzag.png"/></div>
                     <p>Now you will receive alerts when new news and boxes are released!</p>
                     <button class="button btnDialog" onclick="closeNewsByClick()"><h4>GOOD</h4></button>
                 </div>

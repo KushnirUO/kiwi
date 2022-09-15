@@ -22,7 +22,9 @@
 }
 
 
-
+.menu_logo{
+  margin: 0 50px;
+}
 .menu_logo > img {
   width: 191px;
   height: 100px;
@@ -85,12 +87,17 @@
 .iconClose {
   display: none;
 }
+@media (max-width: 1024px) {
+  .menu_item {
+    margin: 2.125rem;
+  }
+}
 @media (max-width: 768px) {
   .menu_item {
     margin: 1.125rem;
   }
   .menu_logo {
-    margin-right: 2.125rem;
+    margin:0 2.125rem 0 0;
   }
 }
 @media (max-width: 666px) {

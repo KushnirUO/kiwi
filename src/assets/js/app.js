@@ -10,7 +10,12 @@ $(function (){
             },
             messages:{
                 email:'Enter correct Email'
+            },
+            submitHandler: function(form) {
+                Fancybox.show([{src: "#dialog-content", type: "inline"}]);
+
             }
+
         }
     )
 })

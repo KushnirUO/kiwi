@@ -61,8 +61,17 @@
   text-align: center;
   color: #696969;
 }
-
+.picItem{
+  max-width: 200px;
+  max-height: 200px;
+}
+.picItemMb{display: none}
 .picItem > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.picItemMb img{
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -77,7 +86,7 @@
 .threeGrid_mediaLine {
   justify-content: center;
   align-items: baseline;
-  margin: 1.875rem;
+  margin: 1.2563rem 1rem;
   display: none;
   gap: 0.625rem;
 }
@@ -93,10 +102,16 @@
   height: 0.5rem;
   object-fit: contain;
 }
+@media (max-width: 1440px){
+.button h4 {
+  font-family: 'Bebas Neue';
+}
+}
 
 @media (max-width: 1024px) {
   .infoItem p {
-    font-size: 0.7rem;
+    font-size: 14px;
+    line-height: 150%;
   }
   .getBox_wrapper {
     margin: 3.125rem 0;
@@ -104,24 +119,31 @@
 }
 
 @media (max-width: 666px) {
-  .getsBoxBabelGreen{
+  .getsBoxBabelGreen, .picItem{
     display: none;
   }
+  .picItemMb{display: flex}
   .getBox_wrapper {
-    margin: 3.25rem;
+    margin: 50px 0 30px;
   }
   .infoItem {
     gap: 1%;
   }
   .threeGrid {
     flex-wrap: wrap;
-    padding-bottom: 1.875rem;
+    padding: 1.8125rem 0 1.875rem;
   }
   .threeGrid_item {
-    gap: 0;
+    gap: 1.875rem;
+  }
+  .infoItem{
+    gap: 0.5rem;
   }
   .threeGrid_mediaLine {
     display: flex;
+  }
+  .getBoxBtn{
+    height: 60px;
   }
 
 }

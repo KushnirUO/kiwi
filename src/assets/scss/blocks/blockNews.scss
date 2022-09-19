@@ -93,6 +93,20 @@
   background: linear-gradient(297.26deg, #74E6CF 34.09%, #C0E594 96.73%);
   border-radius: 3.125rem;
 }
+.newsInfoDate_button{
+  position: relative;
+}
+.buttonPlus_line {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 13px;
+}
+.buttonPlus_line img {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
 
 .newsInfoDate_text p {
   width: 100%;
@@ -206,10 +220,13 @@
   border-radius: 0.625rem;
   background: #F0F8F6;
 }
-
+@media (max-width: 1280px) {
+  .blockNews_wrapper {
+    margin: 3.125rem 1rem 1.875rem;
+  }
+}
 @media (max-width: 768px) {
   .blockNews_wrapper {
-    margin: 3.125rem 0 1.875rem;
     max-height: 35.25rem;
   }
   .newsInfoDate_text p {
